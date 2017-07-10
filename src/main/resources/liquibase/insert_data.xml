@@ -8,42 +8,55 @@
         <sql>
             insert into organizational_unit values (1, 'Д', 'Д', 'director', null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             insert into organizational_unit values (2, 'К', 'К', 'cabinet', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organizational_unit values (12, 'ДТРИП', 'ДТРИП', 'directorate', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-
+            insert into organizational_unit values (12, 'ДТРИП Unit', 'ДТРИП Unit', 'directorate', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (41, 'ДТРИП G5A Sektor 1', 'ДТРИП G5A Sektor 1', 'sector', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (44, 'ДТРИП G5B Sektor 2', 'ДТРИП G5B Sektor ', 'sector', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (47, 'ДТРИП G5C Sektor 3', 'ДТРИП G5C Sektor 3', 'sector', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (42, 'ДТРИП G5A1 Oddelenie 1', 'ДТРИП G5A1 Oddelenie 1', 'oddelenie', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (43, 'ДТРИП G5A2 Oddelenie 2', 'ДТРИП G5A2 Oddelenie 2', 'oddelenie', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (45, 'ДТРИП G5B1 Oddelenie 1', 'ДТРИП G5B1 Oddelenie 1', 'oddelenie', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (46, 'ДТРИП G5B2 Oddelenie 2', 'ДТРИП G5B2 Oddelenie 2', 'oddelenie', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (48, 'ДТРИП G5C1 Oddelenie 1', 'ДТРИП G5C1 Oddelenie 1', 'oddelenie', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (49, 'ДТРИП G5C2 Oddelenie 2', 'ДТРИП G5C2 Oddelenie 2', 'oddelenie', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+       
         </sql>
     </changeSet>
     
     <changeSet id="ivana3" author="ivana">
         <sql>
-            insert into organizational_group values (1, 'Д', 'Д', 'manager_director', null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organizational_group values (2, 'К', 'К', 'cabinet', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-
+            insert into organizational_group values (1, 'general_director', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
+            insert into organizational_group values (2, 'manager_director', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
+            insert into organizational_group values (3, 'manager_sector', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
+            insert into organizational_group values (4, 'manager_department', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
+            insert into organizational_group values (5, 'employee', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
+            insert into organizational_group values (6, 'advisor', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
+            insert into organizational_group values (7, 'technical_documentarist', null, '1900-01-01', null, '1900-01-01',  null, '1900-01-01', true);
         </sql>
     </changeSet>
    
     <changeSet id="ivana4" author="ivana">
         <sql>
-            insert into organization_role values (1, 'Д', 'G1', null, 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (1, 'Д', 'G1', null, 1, 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             
          
-            insert into organization_role values (62,'Директор на ДТРИП', 'G5', 1, 12, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (63,'Советник', 'G5D', 62, 12, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (64,'Технички документарист', 'G5E', 62, 12, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (65,'Раководител на Сектор 1', 'G5A', 62, 41, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (66,'Раководител на одделение 1', 'G5A1', 65, 42, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (67,'Вработени во одделение 1', 'G5A1A', 66, 42, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (68,'Раководител на одделение 2', 'G5А2', 65, 43, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (69,'Вработени во одделение 2', 'G5А2А', 68, 43, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (70,'Раководител на Сектор 2', 'G5B', 62, 44, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (71,'Раководител на одделение 1', 'G5B1', 70, 45, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (72,'Вработени во одделение 1', 'G5B1A', 71, 45, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (73,'Раководител на одделение 2', 'G5B2', 70, 46, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (74,'Вработени во одделение 2', 'G5B2A', 73, 46, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (75,'Раководител на Сектор 3', 'G5C', 62, 47, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (76,'Раководител на одделение 1', 'G5C1', 75, 48, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (77,'Вработени во одделение 1', 'G5C1A', 76, 48, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (78,'Раководител на одделение 2', 'G5C2', 75, 49, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            insert into organization_role values (79,'Вработени во одделение 2', 'G5C2A', 78, 49, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (62,'Директор на ДТРИП', 'G5', 1, 12, 2, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (63,'Советник', 'G5D', 62, 12, 6, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (64,'Технички документарист', 'G5E', 62, 12, 7, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (65,'Раководител на Сектор 1', 'G5A', 62, 41, 3, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (66,'Раководител на одделение 1', 'G5A1', 65, 42, 4, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (67,'Вработени во одделение 1', 'G5A1A', 66, 42,5,  null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (68,'Раководител на одделение 2', 'G5А2', 65, 43,4, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (69,'Вработени во одделение 2', 'G5А2А', 68, 43, 5,null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (70,'Раководител на Сектор 2', 'G5B', 62, 44, 3, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (71,'Раководител на одделение 1', 'G5B1', 70, 45, 4, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (72,'Вработени во одделение 1', 'G5B1A', 71, 45,5, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (73,'Раководител на одделение 2', 'G5B2', 70, 46,4, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (74,'Вработени во одделение 2', 'G5B2A', 73, 46, 5,null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (75,'Раководител на Сектор 3', 'G5C', 62, 47,3, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (76,'Раководител на одделение 1', 'G5C1', 75, 48, 4,null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (77,'Вработени во одделение 1', 'G5C1A', 76, 48, 5,null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (78,'Раководител на одделение 2', 'G5C2', 75, 49, 4, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (79,'Вработени во одделение 2', 'G5C2A', 78, 49,5, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             
          
  
@@ -102,51 +115,51 @@
         <sql>
             insert into state 
             values (1,'Active','podnesen od vraboten, se ceka na rakovoditel na oddelenie', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (2,'Active','odobren od rakovoditel na oddelenie, se ceka na rakovoditel na sektor', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (5,'Active','odobren od rakovoditel na sektor, se ceka na direktor', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (3,'Rejected','odbien od rakovoditel na oddelenie', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (6,'Rejected','odbien od rakovoditel na sektor', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (9,'Rejected','odbien od direktor', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (4,'Change Requested','izmena pobarana od rakovoditel na oddelenie', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (7,'Change Requested','izmena pobarana od rakovoditel na sektor', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (10,'Change Requested','izmena pobarana od direktor', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (8,'Active','odobreno od direktor, se ceka na tehnicki sekretar', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (11,'Change Requested','pobarano mislenje od sovetnik, se ceka na soventik', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
             
             insert into state 
             values (12,'Change Requested','odobreno i procesirano', 
-                    1, null, null, null, null, null, null, true);
+            1, null, null, null, null, null, null, true);
         </sql>
     </changeSet>
     
@@ -155,51 +168,51 @@
         <sql>
             insert into transition 
             values (1, 1, 2, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (2, 1, 3, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (3, 1, 4, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (4, 4, 1, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (5, 2, 6, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (6, 2, 7, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (7, 2, 5, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (8, 5, 9, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (9, 5, 11, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (10, 11, 5, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (11, 5, 8, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
             
             insert into transition 
             values (12, 8, 12, 
-                    null, null, null, null, null, null, true);
+            null, null, null, null, null, null, true);
         </sql>
     </changeSet>
     <!-- transition -->
