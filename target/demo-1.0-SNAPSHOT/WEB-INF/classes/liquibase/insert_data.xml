@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+ 
+    <changeSet id="ivana2" author="ivana">
+        <sql>
+            insert into organizational_unit values (1, 'Д', 'Д', 'director', null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organizational_unit values (2, 'К', 'К', 'cabinet', 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+
+        </sql>
+    </changeSet>
+    
+    
+   
+    <changeSet id="ivana4" author="ivana">
+        <sql>
+            insert into organization_role values (1, 'Д', 'G1', null, 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            
+         
+            insert into organization_role values (62,'Директор на ДТРИП', 'G5', 1, 12, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (63,'Советник', 'G5D', 62, 12, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (64,'Технички документарист', 'G5E', 62, 12, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (65,'Раководител на Сектор 1', 'G5A', 62, 41, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (66,'Раководител на одделение 1', 'G5A1', 65, 42, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (67,'Вработени во одделение 1', 'G5A1A', 66, 42, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (68,'Раководител на одделение 2', 'G5А2', 65, 43, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (69,'Вработени во одделение 2', 'G5А2А', 68, 43, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (70,'Раководител на Сектор 2', 'G5B', 62, 44, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (71,'Раководител на одделение 1', 'G5B1', 70, 45, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (72,'Вработени во одделение 1', 'G5B1A', 71, 45, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (73,'Раководител на одделение 2', 'G5B2', 70, 46, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (74,'Вработени во одделение 2', 'G5B2A', 73, 46, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (75,'Раководител на Сектор 3', 'G5C', 62, 47, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (76,'Раководител на одделение 1', 'G5C1', 75, 48, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (77,'Вработени во одделение 1', 'G5C1A', 76, 48, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (78,'Раководител на одделение 2', 'G5C2', 75, 49, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into organization_role values (79,'Вработени во одделение 2', 'G5C2A', 78, 49, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            
+         
+ 
+        </sql>
+    </changeSet>
+   
+    
+    <changeSet id="ivana6" author="Juksel">
+        <sql>
+            insert into lookup values (1,'DOCUSHARE_TYPE','Документ на архива',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+        </sql>
+    </changeSet>
+    <changeSet id="ivana7" author="Juksel">
+        <sql>
+          
+            insert into lookup values (23,'DOCUSHARE_TYPE','Интерен документ',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+           
+        </sql>
+    </changeSet>
+    <changeSet id="ivana8" author="Juksel">
+        <sql>
+           
+            insert into lookup values (46,'DOCUMENT_TYPE','Барање',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+           
+             
+        </sql>
+    </changeSet>
+     
+    <changeSet id="ivana9" author="Ivana">
+        <sql>
+            insert into lookup values (265,'GENERAL_INVESTIGATION','Општ',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (266,'GENERAL_INVESTIGATION','Различен',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (267,'REGISTRY_MARK','01 - Организација и развој',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (268,'REGISTRY_MARK','02 - Управување и раководење',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (269,'REGISTRY_MARK','03 - Канцелариско - архивски, правни и општи работи',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (270,'REGISTRY_MARK','04 - Човечки ресурси',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (271,'REGISTRY_MARK','05 - Финанси',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (272,'REGISTRY_MARK','06 - Одбрана',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (273,'REGISTRY_MARK','07 - Електорнски',265, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (274,'REGISTRY_MARK','08 - Различен',266, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);     
+            insert into lookup values (275,'SECRECY_LEVEL','Не',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (276,'SECRECY_LEVEL','Интерен',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (277,'SECRECY_LEVEL','Доверлив',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (278,'SECRECY_LEVEL','Строго ',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into lookup values (280,'SECRECY_LEVEL','Ограничена ',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+        </sql>
+    </changeSet>
+    <!-- process - samo 1, interni dokumenti -->
+    <!--    <changeSet id="ivana9" author="Ivana">
+        <sql>
+            insert into process values (265,'GENERAL_INVESTIGATION','Општ',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+        </sql>
+    </changeSet>-->
+    <!-- state -->
+    <changeSet id="bojan1" author="Bojan">
+        <sql>
+            insert into state 
+            values (1,'Active','podnesen od vraboten, se ceka na rakovoditel na oddelenie', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (2,'Active','odobren od rakovoditel na oddelenie, se ceka na rakovoditel na sektor', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (5,'Active','odobren od rakovoditel na sektor, se ceka na direktor', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (3,'Rejected','odbien od rakovoditel na oddelenie', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (6,'Rejected','odbien od rakovoditel na sektor', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (9,'Rejected','odbien od direktor', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (4,'Change Requested','izmena pobarana od rakovoditel na oddelenie', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (7,'Change Requested','izmena pobarana od rakovoditel na sektor', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (10,'Change Requested','izmena pobarana od direktor', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (8,'Active','odobreno od direktor, se ceka na tehnicki sekretar', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (11,'Change Requested','pobarano mislenje od sovetnik, se ceka na soventik', 
+                    1, null, null, null, null, null, null, true);
+            
+            insert into state 
+            values (12,'Change Requested','odobreno i procesirano', 
+                    1, null, null, null, null, null, null, true);
+        </sql>
+    </changeSet>
+    
+    <!-- action -->
+    <changeSet id="bojan2" author="Bojan">
+        <sql>
+            insert into transition 
+            values (1, 1, 2, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (2, 1, 3, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (3, 1, 4, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (4, 4, 1, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (5, 2, 6, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (6, 2, 7, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (7, 2, 5, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (8, 5, 9, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (9, 5, 11, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (10, 11, 5, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (11, 5, 8, 
+                    null, null, null, null, null, null, true);
+            
+            insert into transition 
+            values (12, 8, 12, 
+                    null, null, null, null, null, null, true);
+        </sql>
+    </changeSet>
+    <!-- transition -->
+    
+    <!-- transition_action -->
+   
+</databaseChangeLog>
