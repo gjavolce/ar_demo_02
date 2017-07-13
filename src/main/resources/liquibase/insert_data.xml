@@ -104,6 +104,16 @@
             insert into lookup values (280,'SECRECY_LEVEL','Ограничена ',null, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
         </sql>
     </changeSet>
+    <changeSet id="ivana10" author="Ivana">
+        <sql>
+            insert into employee values (1,'Bojan','Dimovski','bdimovski', 62, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into employee values (2,'Petko','Petkovski','ppetkovski', 65, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into employee values (3,'Stojan','Stojanov','sstojanov', 66, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+            insert into employee values (4,'Darko','Darkovski','ddarkovski', 67, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
+        </sql>
+    </changeSet>
+    
+    
     <!-- process - samo 1, interni dokumenti -->
     <!--    <changeSet id="ivana9" author="Ivana">
         <sql>
@@ -215,7 +225,6 @@
             null, null, null, null, null, null, true);
         </sql>
     </changeSet>
-    <!-- transition -->
     
     <!-- transition_action -->
    

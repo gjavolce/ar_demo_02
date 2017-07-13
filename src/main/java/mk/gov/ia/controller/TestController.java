@@ -20,7 +20,9 @@ import mk.gov.ia.exception.ServiceException;
 import mk.gov.ia.model.Document;
 import mk.gov.ia.model.DocumentLeave;
 import mk.gov.ia.model.DocumentLeaveHistory;
+import mk.gov.ia.model.Role;
 import mk.gov.ia.service.DocumentService;
+import mk.gov.ia.service.OrganizationService;
 
 /**
  *
@@ -43,6 +45,9 @@ public class TestController implements Serializable {
     private List<DocumentLeaveHistory> documentLeaveHistory;
 
     private DocumentLeave currentDocumentLeave = new DocumentLeave();
+
+    @ManagedProperty(value = "#{organizationService}")
+    private OrganizationService organizationService;
 
     public DocumentLeave getCurrentDocumentLeave() {
         return currentDocumentLeave;
@@ -125,6 +130,14 @@ public class TestController implements Serializable {
         this.documentLeaveHistory = documentService.getAllDocumentLeaveHistories();
     }
 
+    public OrganizationService getOrganizationService() {
+        return organizationService;
+    }
+
+    public void setOrganizationService(OrganizationService organizationService) {
+        this.organizationService = organizationService;
+    }
+
     public void testMethod01() {
 
         try {
@@ -153,6 +166,25 @@ public class TestController implements Serializable {
                     null, "Enters curr doc id:" + currentDocumentLeave.getId());
         } catch (ServiceException ex) {
             Logger.getLogger(TestController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    public void testMethod04() {
+
+        List<Role> temp = organizationService.getAllRoles();
+        System.out.println("nesho");
+        System.out.println("reports to: " + temp.get(10).getReportsTo().getName());
+        System.out.println("role name: " + temp.get(10).getName());
+        
+        Role x = temp.get(10);
+        
+        while(x != null) {
+            
+            System.out.println("role name: " + x.getName());
+            
+            x = x.getReportsTo();
+            
         }
 
     }

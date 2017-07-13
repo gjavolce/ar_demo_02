@@ -7,8 +7,8 @@ package mk.gov.ia.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -26,6 +26,7 @@ public class Role extends BaseObject{
     private Role reportsTo;
     private Unit organizationalUnit;
     private String fullRoleName;
+    private Group organizationalGroup;
 
     
 
@@ -48,6 +49,7 @@ public class Role extends BaseObject{
     }
 
     @OneToOne
+    @JoinColumn(name = "reports_to")
     public Role getReportsTo() {
         return reportsTo;
     }
@@ -57,6 +59,7 @@ public class Role extends BaseObject{
     }
 
     @OneToOne
+    @JoinColumn(name = "organizational_unit_id")
     public Unit getOrganizationalUnit() {
         return organizationalUnit;
     }
@@ -69,5 +72,17 @@ public class Role extends BaseObject{
     public String getFullRoleName() {
         return "("+this.roleCode+") " + this.name;
     }
+
+    @OneToOne
+    @JoinColumn(name = "organizational_group_id")
+    public Group getOrganizationalGroup() {
+        return organizationalGroup;
+    }
+
+    public void setOrganizationalGroup(Group organizationalGroup) {
+        this.organizationalGroup = organizationalGroup;
+    }
+    
+    
 
 }
