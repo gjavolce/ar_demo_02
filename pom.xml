@@ -271,12 +271,12 @@
                     <propertyFile>src/main/resources/liquibase/liquibase-db.properties</propertyFile>
                 </configuration>                
                 <executions>
-                    <execution>
+                    <!-- <execution>
                         <phase>process-resources</phase>                                                                  
                         <goals>
                             <goal>update</goal>
                         </goals>
-                    </execution>
+                    </execution> -->
                 </executions>
             </plugin> 	
         </plugins>
