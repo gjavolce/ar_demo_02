@@ -7,6 +7,8 @@ package mk.gov.ia.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -18,30 +20,28 @@ import javax.persistence.Table;
 @Table(name="transition")
 public class Transition extends BaseObject {
     
-    private String stateFrom;
-    private String stateTo;
+    private State stateFrom;
+    private State stateTo;
 
-    
-    @Column(name = "state_from")
-    public String getStateFrom() {
+    @OneToOne
+    @JoinColumn(name = "state_from")
+    public State getStateFrom() {
         return stateFrom;
     }
 
-    public void setStateFrom(String stateFrom) {
+    public void setStateFrom(State stateFrom) {
         this.stateFrom = stateFrom;
     }
 
-    
-    @Column(name = "state_to")
-    public String getStateTo() {
+    @OneToOne
+    @JoinColumn(name = "state_to")
+    public State getStateTo() {
         return stateTo;
     }
 
-    public void setStateTo(String stateTo) {
+    public void setStateTo(State stateTo) {
         this.stateTo = stateTo;
     }
-    
-    
 
     
 }

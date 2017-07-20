@@ -37,8 +37,6 @@
     <changeSet id="ivana4" author="ivana">
         <sql>
             insert into organization_role values (1, 'Д', 'G1', null, 1, 1, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            
-         
             insert into organization_role values (62,'Директор на ДТРИП', 'G5', 1, 12, 2, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             insert into organization_role values (63,'Советник', 'G5D', 62, 12, 6, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             insert into organization_role values (64,'Технички документарист', 'G5E', 62, 12, 7, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
@@ -57,9 +55,6 @@
             insert into organization_role values (77,'Вработени во одделение 1', 'G5C1A', 76, 48, 5,null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             insert into organization_role values (78,'Раководител на одделение 2', 'G5C2', 75, 49, 4, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
             insert into organization_role values (79,'Вработени во одделение 2', 'G5C2A', 78, 49,5, null, '1900-01-01', null, null, '1900-01-01', null, null, '1900-01-01', null, true);
-            
-         
- 
         </sql>
     </changeSet>
    
@@ -173,7 +168,6 @@
         </sql>
     </changeSet>
     
-    <!-- action -->
     <changeSet id="bojan2" author="Bojan">
         <sql>
             insert into transition 
@@ -226,6 +220,32 @@
         </sql>
     </changeSet>
     
+    <changeSet id="bojan3" author="Bojan">
+        <sql>
+            insert into action 
+            values (1, "Одобрено", "approve", 2,  
+            null, null, null, null, null, null, true);
+            
+             insert into action 
+            values (2, "Одобрено", "approve", 3,  
+            null, null, null, null, null, null, true);
+            
+              insert into action 
+            values (3, "Одобрено", "approve", 4,  
+            null, null, null, null, null, null, true);
+            
+              insert into action 
+            values (4, "Одобрено", "approve", 6,  
+            null, null, null, null, null, null, true);
+            
+              insert into action 
+            values (5, "Одобрено", "approve", 3,  
+            null, null, null, null, null, null, true);
+        </sql>
+    </changeSet>
+    
+    
     <!-- transition_action -->
+    
    
 </databaseChangeLog>

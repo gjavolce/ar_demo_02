@@ -16,26 +16,31 @@ import javax.persistence.Table;
  * @author internet
  */
 @Entity
-@Table(name="action")
-public class Action extends BaseObject{
-    
-    
-   
+@Table(name = "action")
+public class Action extends BaseObject {
+
     private String actionType;
-    private Group group_id;
+    private Group group;
+    private String name;
 
-    
-   @OneToOne
-   @JoinColumn(name = "transition_id")
-    public Group getGroup_id() {
-        return group_id;
+    @Column(name = "name")
+    public String getName() {
+        return name;
     }
 
-    public void setGroup_id(Group group_id) {
-        this.group_id = group_id;
+    public void setName(String name) {
+        this.name = name;
     }
 
-   
+    @OneToOne
+    @JoinColumn(name = "group_id")
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 
     @Column(name = "action_type")
     public String getActionType() {
@@ -46,8 +51,4 @@ public class Action extends BaseObject{
         this.actionType = actionType;
     }
 
- 
-    
-    
-    
 }

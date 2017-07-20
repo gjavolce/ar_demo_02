@@ -15,62 +15,52 @@ import javax.persistence.Table;
  *
  * @author internet
  */
-
 @Entity
-@Table(name="document_flow")
+@Table(name = "document_flow")
 public class DocumentFlow extends BaseObject {
-    
-    private String isComplete;
-    private Document documentId;
-    private Action actionId;
-    private Transition transitionId;
 
-    
+    private boolean complete;
+    private Document document;
+    private Action action;
+    private Transition transition;
+
     @Column(name = "is_complete")
-    public String getIsComplete() {
-        return isComplete;
+    public boolean isComplete() {
+        return complete;
     }
 
-    public void setIsComplete(String isComplete) {
-        this.isComplete = isComplete;
+    public void setIsComplete(boolean isComplete) {
+        this.complete = isComplete;
     }
 
-    
-     @OneToOne
-   @JoinColumn(name = "document_id")
-    public Document getDocumentId() {
-        return documentId;
+    @OneToOne
+    @JoinColumn(name = "document_id")
+    public Document getDocument() {
+        return document;
     }
 
-    public void setDocumentId(Document documentId) {
-        this.documentId = documentId;
+    public void setDocument(Document document) {
+        this.document = document;
     }
 
-    
-     @OneToOne
-   @JoinColumn(name = "action_id")
-    public Action getActionId() {
-        return actionId;
+    @OneToOne
+    @JoinColumn(name = "action_id")
+    public Action getAction() {
+        return action;
     }
 
-    public void setActionId(Action actionId) {
-        this.actionId = actionId;
+    public void setAction(Action action) {
+        this.action = action;
     }
 
-    
-     @OneToOne
-   @JoinColumn(name = "transition_id")
-    public Transition getTransitionId() {
-        return transitionId;
+    @OneToOne
+    @JoinColumn(name = "transition_id")
+    public Transition getTransition() {
+        return transition;
     }
 
-    public void setTransitionId(Transition transitionId) {
-        this.transitionId = transitionId;
+    public void setTransitionId(Transition transition) {
+        this.transition = transition;
     }
-    
-    
-    
-    
 
-    
 }
